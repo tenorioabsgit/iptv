@@ -108,6 +108,43 @@ MJH_CHANNELS_URL = 'https://i.mjh.nz/SamsungTVPlus/.channels.json.gz'
 TARGET_REGIONS = ['BR', 'US', 'GB', 'CA', 'us', 'gb', 'ca']
 OUTPUT_FILE = 'playlist.m3u'
 
+# Canais extras (VH1 e MTV) adicionados manualmente
+EXTRA_CHANNELS = [
+    # VH1 - Pluto TV US
+    {'name': 'VH1 Classics', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6076cd1df8576d0007c82193/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'US', 'source': 'Pluto TV US'},
+    {'name': 'VH1 I Love Reality', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5d7154fa8326b6ce4ec31f2e/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'US', 'source': 'Pluto TV US'},
+    {'name': 'VH1 Hip Hop Family', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5d71561df6f2e6d0b6493bf5/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'US', 'source': 'Pluto TV US'},
+    {'name': 'VH1 Queens of Reality', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/66abefe5d2d50d00082c7d12/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'US', 'source': 'Pluto TV US'},
+    # VH1 - Pluto TV Italia
+    {'name': 'VH1+ Music Legends', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/62e8cc10ca869f00078efca8/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'IT', 'source': 'Pluto TV IT'},
+    {'name': "VH1+ Back to 90's", 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6552085aab05240008b05f6c/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'IT', 'source': 'Pluto TV IT'},
+    {'name': 'VH1+ Rock!', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/636a4173e34fd50007534542/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'IT', 'source': 'Pluto TV IT'},
+    {'name': 'VH1+ Dance', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/65e5d9d2ec9fda0008c35f91/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'IT', 'source': 'Pluto TV IT'},
+    {'name': 'VH1+ Classici', 'url': 'https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6690f892d51259000880d1c4/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=web&deviceDNT=1', 'region': 'IT', 'source': 'Pluto TV IT'},
+    # VH1 - Outros
+    {'name': 'VH1 Italia', 'url': 'https://content.uplynk.com/channel/36953f5b6546464590d2fcd954bc89cf.m3u8', 'region': 'IT', 'source': 'iptv-org'},
+    # MTV - MoveOnJoy (alta confiabilidade)
+    {'name': 'MTV East', 'url': 'https://fl1.moveonjoy.com/MTV/index.m3u8', 'region': 'US', 'source': 'MoveOnJoy'},
+    {'name': 'MTV2', 'url': 'https://fl1.moveonjoy.com/MTV_2/index.m3u8', 'region': 'US', 'source': 'MoveOnJoy'},
+    {'name': 'MTV Live', 'url': 'https://fl1.moveonjoy.com/MTV_LIVE/index.m3u8', 'region': 'US', 'source': 'MoveOnJoy'},
+    {'name': 'mtvU', 'url': 'https://fl1.moveonjoy.com/MTV_U/index.m3u8', 'region': 'US', 'source': 'MoveOnJoy'},
+    # MTV - Pluto TV US
+    {'name': "MTV Spankin' New", 'url': 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d14fdb8ca91eedee1633117/master.m3u8?appName=web&appVersion=unknown&deviceDNT=0&deviceId=mtv-spankin&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false', 'region': 'US', 'source': 'Pluto TV US'},
+    {'name': 'MTV en Español', 'url': 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5cf96d351652631e36d4331f/master.m3u8?appName=web&appVersion=unknown&deviceDNT=0&deviceId=mtv-espanol&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false', 'region': 'US', 'source': 'Pluto TV US'},
+    {'name': 'MTV Flow Latino', 'url': 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d3609cd6a6c78d7672f2a81/master.m3u8?appName=web&appVersion=unknown&deviceDNT=0&deviceId=mtv-flow&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false', 'region': 'US', 'source': 'Pluto TV US'},
+    # MTV - Pluto TV Europa
+    {'name': 'MTV Music', 'url': 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6245d15062cd1f00070a2338/master.m3u8?appName=web&appVersion=unknown&deviceDNT=0&deviceId=mtv-music&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false', 'region': 'DE', 'source': 'Pluto TV DE'},
+    {'name': 'MTV Classics FR', 'url': 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f92b56a367e170007cd43f4/master.m3u8?appName=web&appVersion=unknown&deviceDNT=0&deviceId=mtv-classics-fr&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false', 'region': 'FR', 'source': 'Pluto TV FR'},
+    {'name': 'MTV Originals ES', 'url': 'https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5f1aadf373bed3000794d1d7/master.m3u8?advertisingId=&appName=web&appVersion=DNT&deviceDNT=0&deviceId=mtv-originals&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&serverSideAds=false', 'region': 'ES', 'source': 'Pluto TV ES'},
+    # MTV - Streams adicionais
+    {'name': 'MTV 00s', 'url': 'http://myott.top/stream/DT6QU63K5VX/165.m3u8', 'region': 'INT', 'source': 'myott'},
+    {'name': 'MTV 80s', 'url': 'http://myott.top/stream/DT6QU63K5VX/87.m3u8', 'region': 'INT', 'source': 'myott'},
+    {'name': 'MTV 90s', 'url': 'http://myott.top/stream/DT6QU63K5VX/88.m3u8', 'region': 'INT', 'source': 'myott'},
+    {'name': 'MTV Hits', 'url': 'http://myott.top/stream/DT6QU63K5VX/302.m3u8', 'region': 'INT', 'source': 'myott'},
+    # Notícias BR - canais extras
+    {'name': 'BandNews TV', 'url': 'https://evpp.mm.uol.com.br/geob_band/bandnewstv/playlist.m3u8', 'region': 'BR', 'source': 'Band'},
+]
+
 # Mapeamento de região para nome do país
 REGION_TO_COUNTRY = {
     'BR': 'Brasil',
@@ -144,7 +181,9 @@ BR_CATEGORIES = [
     ('BR Notícias', [
         'cnn brasil', 'jovem pan', 'record news', 'sbt news', 'bm&c news',
         'bloomberg', 'euronews', 'news now', 'cbs news', 'usa today',
-        'newsmax', '011 news', 'canal uol', 'norte news',
+        'newsmax', '011 news', 'canal uol', 'norte news', 'bandnews',
+        'tv 247', 'times brasil', 'cnbc', 'canal rural', 'notícias agrícolas',
+        'noticias agricolas', 'new brasil', 'terraviva', 'veja mais',
     ]),
     ('BR Esportes', [
         'fifa', 'dazn', 'pfl mma', 'fuel tv', 'racer', 'ge tv', 'sft combat',
@@ -182,7 +221,7 @@ BR_CATEGORIES = [
         'homem que veio do céu', 'homem que veio do ceu',
     ]),
     ('BR Entretenimento', [
-        'mtv', 'comedy central', 'failarmy', 'masterchef', 'south park',
+        'comedy central', 'failarmy', 'masterchef', 'south park',
         'pegadinhas', 'just for laughs', 'shark tank', 'encantador de cães',
         'encantador de caes', 'pluto tv animais', 'pet collective', 'fashiontv',
         'caras tv', 'pluto tv história', 'pluto tv historia', 'smithsonian',
@@ -204,17 +243,54 @@ BR_CATEGORIES = [
     ('BR Música', [
         'stingray', 'karaokê', 'karaoke', 'forró', 'forro', 'sertanejo',
         'pop retrô', 'pop retro', 'rock show', 'qwest tv', 'hits', 'kpop',
-        'classique tv', 'rede blitz', 'mtv biggest pop', 'mtv rocks', 'mtv classic',
+        'classique tv', 'rede blitz',
         'rádio forró', 'radio forro', 'hip-hop', 'hip hop', 'caipira',
         'pluto tv shows por stingray', 'pluto tv paisagens', 'pluto tv karaokê',
         'tikitok radio', 'tiktok radio',
     ]),
 ]
 
+# Ordem de relevância para BR Notícias (menor = mais relevante)
+NEWS_RELEVANCE = [
+    'cnn brasil',
+    'record news',
+    'bandnews',
+    'jovem pan',
+    'sbt news',
+    'bm&c news',
+    'times brasil',
+    'cnbc',
+    'bloomberg',
+    'canal uol',
+    'euronews',
+    'cnn portugal',
+    'canal rural',
+    'terraviva',
+    'new brasil',
+    'veja mais',
+    'notícias agrícolas',
+    'noticias agricolas',
+    'tv 247',
+    '011 news',
+    'cbs news',
+    'usa today',
+    'newsmax',
+    'norte news',
+]
+
 
 # ============================================================
 # FUNCOES
 # ============================================================
+
+def get_news_relevance(channel_name):
+    """Retorna prioridade de relevância para canais de notícias."""
+    name_lower = channel_name.lower()
+    for i, keyword in enumerate(NEWS_RELEVANCE):
+        if keyword in name_lower:
+            return i
+    return 999
+
 
 def classify_br_channel(channel_name):
     """Classifica um canal brasileiro em subcategoria."""
@@ -228,6 +304,15 @@ def classify_br_channel(channel_name):
 
 def get_final_group(original_group, region, channel_name=''):
     """Determina o grupo final baseado no país, categoria ou música."""
+    name_lower = channel_name.lower() if channel_name else ''
+
+    # VH1 e MTV são categorias globais (qualquer região)
+    if 'vh1' in name_lower:
+        return 'VH1'
+    import re
+    if re.search(r'\bmtv\b', name_lower):
+        return 'MTV'
+
     original_lower = original_group.lower() if original_group else ''
 
     # Se for música (qualquer região), coloca no grupo Music
@@ -446,6 +531,20 @@ def collect_all_channels():
             all_channels.extend(channels)
             print(f"    OK! ({len(channels)} canais)")
 
+    # Adicionar canais extras (VH1, MTV)
+    if EXTRA_CHANNELS:
+        print(f"\n  Adicionando {len(EXTRA_CHANNELS)} canais extras (VH1/MTV)...")
+        for ch in EXTRA_CHANNELS:
+            extinf = f'#EXTINF:-1 tvg-name="{ch["name"]}",{ch["name"]}'
+            all_channels.append({
+                'name': ch['name'],
+                'url': ch['url'],
+                'extinf': extinf,
+                'source': ch.get('source', 'Extra'),
+                'region': ch.get('region', 'INT'),
+                'original_group': ''
+            })
+
     print(f"\nTotal coletados: {len(all_channels)}")
     all_channels = deduplicate_channels(all_channels)
     return all_channels
@@ -458,16 +557,20 @@ def generate_m3u_content(channels):
     lines.append(f'# Canais: {len(channels)}')
     lines.append('')
 
+    # Pré-calcular grupo final de cada canal
+    enriched = []
     for ch in channels:
-        # Determina o grupo final (subcategoria BR, país ou Music)
         original_group = ch.get('original_group', '')
         region = ch.get('region', '')
         channel_name = ch.get('name', '')
         final_group = get_final_group(original_group, region, channel_name)
+        enriched.append((ch, final_group))
 
-        # Atualiza o extinf com o novo grupo
+    # Ordenar BR Notícias por relevância
+    enriched.sort(key=lambda x: get_news_relevance(x[0].get('name', '')) if x[1] == 'BR Notícias' else 999)
+
+    for ch, final_group in enriched:
         updated_extinf = update_extinf_group(ch['extinf'], final_group)
-
         lines.append(updated_extinf)
         lines.append(ch['url'])
 
