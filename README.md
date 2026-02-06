@@ -17,6 +17,13 @@ https://raw.githubusercontent.com/tenorioabsgit/iptv/main/playlist.m3u
 | Samsung TV Plus | BR, US, GB, CA |
 | LG Channels | BR |
 | TCL | BR |
+| Soul TV | BR |
+| Rede iTV | BR |
+| Movieark | BR |
+| Pluto TV | BR |
+| IPTV-Org | BR |
+| Free-TV | BR |
+| FTA-IPTV | BR |
 | Roku Channel | US |
 | Amazon Fire TV | US |
 

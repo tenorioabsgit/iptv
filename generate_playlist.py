@@ -37,6 +37,52 @@ SOURCES = {
         'type': 'direct_m3u',
         'region': 'BR',
     },
+    'soultv_br': {
+        'name': 'Soul TV Brasil',
+        'url': 'https://www.apsattv.com/soultv.m3u',
+        'type': 'direct_m3u',
+        'region': 'BR',
+    },
+    'redeitv_br': {
+        'name': 'Rede iTV Brasil',
+        'url': 'https://www.apsattv.com/redeitv.m3u',
+        'type': 'direct_m3u',
+        'region': 'BR',
+    },
+    'movieark_br': {
+        'name': 'Movieark Brasil',
+        'url': 'https://www.apsattv.com/moviearkbr.m3u',
+        'type': 'direct_m3u',
+        'region': 'BR',
+    },
+
+    # Brasil (GitHub agregadores)
+    'iptv_org_br': {
+        'name': 'IPTV-Org Brasil',
+        'url': 'https://iptv-org.github.io/iptv/countries/br.m3u',
+        'type': 'direct_m3u',
+        'region': 'BR',
+    },
+    'freetv_br': {
+        'name': 'Free-TV Brasil',
+        'url': 'https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_brazil.m3u8',
+        'type': 'direct_m3u',
+        'region': 'BR',
+    },
+    'fta_br': {
+        'name': 'FTA-IPTV Brasil',
+        'url': 'https://raw.githubusercontent.com/joaoguidugli/FTA-IPTV-Brasil/master/playlist.m3u8',
+        'type': 'direct_m3u',
+        'region': 'BR',
+    },
+
+    # Brasil (Pluto TV)
+    'plutotv_br': {
+        'name': 'Pluto TV Brasil',
+        'url': 'https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/plutotv_br.m3u',
+        'type': 'direct_m3u',
+        'region': 'BR',
+    },
 
     # EUA (apsattv.com)
     'roku_us': {
@@ -202,6 +248,22 @@ def generate_mjh_channels(data, region, source_name):
     return channels
 
 
+def deduplicate_channels(channels):
+    """Remove canais duplicados baseado na URL do stream."""
+    seen_urls = set()
+    unique = []
+    for ch in channels:
+        url = ch['url'].split('?')[0].rstrip('/')
+        if url not in seen_urls:
+            seen_urls.add(url)
+            unique.append(ch)
+    removed = len(channels) - len(unique)
+    if removed:
+        print(f"  Duplicados removidos: {removed}")
+    print(f"  Canais unicos: {len(unique)}")
+    return unique
+
+
 def test_channel(channel, timeout=8):
     """Testa se um canal esta funcionando."""
     url = channel['url']
@@ -280,6 +342,7 @@ def collect_all_channels():
             print(f"    OK! ({len(channels)} canais)")
 
     print(f"\nTotal coletados: {len(all_channels)}")
+    all_channels = deduplicate_channels(all_channels)
     return all_channels
 
 
